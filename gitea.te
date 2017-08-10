@@ -1,0 +1,8 @@
+
+
+#============= init_t ==============
+
+allow init_t mysqld_port_t:tcp_socket name_connect;
+allow init_t tmp_t:file unlink;
+allow init_t user_home_t:dir { create rename reparent rmdir };
+allow init_t user_home_t:file { append create execute execute_no_trans lock open read setattr unlink write };
