@@ -1,4 +1,15 @@
 
+module gitea 1.0;
+
+require {
+    type mysqld_port_t;
+    type user_home_t;
+    type tmp_t;
+    type init_t;
+    class tcp_socket name_connect;
+    class dir { create rename reparent rmdir };
+    class file { append create execute execute_no_trans lock open read setattr unlink write };
+}
 
 #============= init_t ==============
 
